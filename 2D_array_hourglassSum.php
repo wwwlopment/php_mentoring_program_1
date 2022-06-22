@@ -7,34 +7,25 @@
  * The function accepts 2D_INTEGER_ARRAY arr as parameter.
  */
 
-function hourglassSum($arr) {
+function hourglassSum(array $arr) {
     // Write your code here
-        $maxSum = '';
-        $cnt = count($arr);
-    for ($step1 = 0; $step1 < $cnt-2; $step1++){
-        for ($step2 = 0; $step2 < $cnt-2; $step2++){
-            $currentSum = $arr[$step1][$step2] + $arr[$step1][$step2+1] 
-         + $arr[$step1][$step2+2] + $arr[$step1+1][$step2+1] 
-         + $arr[$step1+2][$step2] + $arr[$step1+2][$step2+1] 
-         + $arr[$step1+2][$step2+2];
+    $minSize = count($arr) - 2;
 
-            if($currentSum <= 0){
-               $temp = $currentSum;
-               if (is_string($maxSum)){
-                   $maxSum = $temp;
-               } else if($temp == 0 && $maxSum <= 0){
-                   $maxSum = $temp;
-               }
-                else if($temp > $maxSum){
-                   $maxSum = $temp;
-               }
-            } else if($currentSum > $maxSum){
-                $maxSum = $currentSum;
-            } 
+    if ($minSize < 1) {
+        die('Impossible, minimal size of array is 3 items');
+    }
+
+    $maxSum = 0;
+    for ($i = 0; $i < $minSize; $i++) {
+        for ($j = 0; $j < $minSize; $j++) {
+            $sum = ($arr[$i][$j] + $arr[$i][$j + 1] + $arr[$i][$j + 2]) +
+                ($arr[$i + 1][$j + 1]) +
+                ($arr[$i + 2][$j] + $arr[$i + 2][$j + 1] + $arr[$i + 2][$j + 2]);
+            $maxSum = max($maxSum, $sum);
         }
     }
+    
     return $maxSum;
-
 }
 
 $fptr = fopen(getenv("OUTPUT_PATH"), "w");
