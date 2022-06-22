@@ -8,8 +8,14 @@
  */
 
 function reverseArray($a) {
-    // Write your code here
+  // Write your code here
+  $size = count($a);
+  $new_arr = [];
 
+  for($i=$size-1; $i>=0; $i--){
+      $new_arr[$i] = $a[$i];
+  } 
+  return $new_arr;
 }
 
 $fptr = fopen(getenv("OUTPUT_PATH"), "w");
