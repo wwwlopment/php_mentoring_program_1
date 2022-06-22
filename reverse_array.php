@@ -13,7 +13,7 @@ function reverseArray($a) {
   $new_arr = [];
 
   for($i=$size-1; $i>=0; $i--){
-      $new_arr[$i] = $a[$i];
+      $new_arr[] = $a[$i];
   } 
   return $new_arr;
 }
