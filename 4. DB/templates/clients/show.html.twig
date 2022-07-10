@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="modal-dialog">
+        <div class="modal-content">
+            {{ form_start(form) }}
+            <div class="modal-header">
+                <h4 class="modal-title">Show Client</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    {{ form_row(form.name) }}
+                </div>
+                <div class="form-group">
+                    {{ form_row(form.email) }}
+                </div>
+                <div class="form-group">
+                    {{ form_row(form.address) }}
+                </div>
+                <div class="form-group">
+                    {{ form_row(form.phone) }}
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" href="/" >Home</a>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+{% endblock %}
+
