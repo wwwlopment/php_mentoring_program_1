@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-cat mr-2"></i>
+                Cat'SSS
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" data-route="{{ path('settingsUpdate') }}">
+                    <div class="navbar-nav ml-auto mb-2 mb-lg-0">
+                        <!-- Checked switch -->
+                        {% for key, parameter in settings %}
+                            <div class="form-check form-switch mr-4">
+                                <input class="form-check-input" type="checkbox" role="switch" id="{{ key }}" {{parameter ? 'checked' : ''}}/>
+                                <label class="form-check-label" for="flexSwitchCheckChecked">{{ key | capitalize}}</label>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+        </div>
+    </nav>
+
+    <div class="tm-hero d-flex justify-content-end align-items-center pr-5" data-parallax="scroll" data-image-src="img/hero.jpg">
+    </div>
+
+    <div class="container-fluid tm-container-content tm-mt-60">
+        <div class="row mb-4 justify-content-center align-items-center">
+            <h2 class="col-6 tm-text-primary" style="text-align: center">
+                Photos
+            </h2>
+        </div>
+        <div class="row tm-gallery">
+            {% include "home/photo_list.html.twig" %}
+        </div> <!-- row -->
+    </div> <!-- container-fluid, tm-container-content -->
+    <div class="col-12 d-flex justify-content-center align-items-center tm-paging-col mb-5">
+        <a id="load-more" href="javascript:void(0);" class="btn btn-primary" data-route="{{path('loadMore')}}" data-next-page="{{ nextPage }}">Load more</a>
+    </div>
+    <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+    </footer>
+
+{% endblock %}
