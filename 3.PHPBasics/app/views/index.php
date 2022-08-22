@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en" xml:lang="uk">
 <head>
     <title>Words calculator</title>
     <meta charset="utf-8"/>
@@ -136,7 +136,7 @@
                     <div class="col-6 col-12-medium" style="padding-right: 10px">
                         <h2>Frequency of characters</h2>
                         <div class="table-wrapper">
-                            <table>
+                            <table aria-describedby="charters-table">
                                 <thead>
                                 <tr>
                                     <th>Character</th>
@@ -157,7 +157,7 @@
                     <div class="col-6 col-12-medium">
                         <h2>Distribution of characters as a percentage of total</h2>
                         <div class="table-wrapper">
-                            <table>
+                            <table aria-describedby="percentage-table">
                                 <thead>
                                 <tr>
                                     <th>Character</th>
