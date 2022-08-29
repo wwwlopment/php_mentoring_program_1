@@ -1,0 +1,22 @@
+{% if statistic|default %}
+<!-- Statistic -->
+    <section id="statistic" class="wrapper style3 fade-up">
+        <div class="inner">
+            <h2>Global Statistic</h2>
+
+            <div class="features">
+                <section>
+                    <span class="icon solid major fa-list"></span>
+                    <h3>Total submitted texts:  {{ statistic.getCount() }}</h3>
+                    <p>
+                        Number of characters: {{ statistic.getCharactersCount() }}<br>
+                        Number of words: {{ statistic.getWordsCount() }}<br>
+                        Number of sentences: {{ statistic.getSenetncesCount() }} <br>
+                        Average word length: {{ statistic.getWordLengthAvg() }} <br>
+                        The average number of words in a sentence: {{ statistic.getWordsInSentenceAvg() }} <br>
+                    </p>
+                </section>
+            </div>
+          </div>
+    </section>
+{% endif %}

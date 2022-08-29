@@ -1,0 +1,24 @@
+<!-- Sidebar -->
+<section id="sidebar">
+    <div class="inner">
+        <nav>
+            <ul>
+                <li><a href="{{ path('index') }}">
+                        {% if app.request.attributes.get('_route') == 'index' %}
+                            Welcome
+                        {% else %}
+                            Home
+                        {% endif %}
+                    </a>
+                </li>
+                {% if text is defined and text %}
+                    <li><a href="#statistic">View Statistic</a></li>
+                {% endif %}
+                {% if lastResults is defined and lastResults %}
+                    <li><a href="{{ path('last_results') }}">Your Last Results</a></li>
+                {% endif %}
+                <li><a href="{{ path('global_statistic') }}">Global Statistic</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
