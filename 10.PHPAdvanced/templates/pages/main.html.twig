@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Main {% endblock %}
+{% block body %}
+{% include 'sections/mainSidebar.html.twig' %}
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Intro -->
+        <section id="intro" class="wrapper style1 fullscreen fade-up">
+            <div class="inner">
+                <a href="{{ path('index') }}"><h1>Words calculator</h1></a>
+                <p>Put your text on form below and see some information about</p>
+            </div>
+            <fieldset id="radio-inputs" class="pl-20">
+                <legend>Choose your text input</legend>
+                <div>
+                    <input type="radio" id="fieldset-text-value" name="fieldset-format" value="text" {% if input_selected == null or input_selected == 'text' %} checked {% endif %}>
+                    <label for="fieldset-text-value">Text</label>
+                </div>
+                <div>
+                    <input type="radio" id="fieldset-file-upload" name="fieldset-format" value="file" {% if input_selected == 'file' %} checked {% endif %}>
+                    <label for="fieldset-file-upload">File</label>
+                </div>
+                <div>
+                    <input type="radio" id="fieldset-url" name="fieldset-format" value="url" {% if input_selected == 'url' %} checked {% endif %}>
+                    <label for="fieldset-url">Url</label>
+                </div>
+            </fieldset>
+            <form id="inputs" method="post" action="{{ path('index') }}#statistic" enctype="multipart/form-data" class="p-20">
+                <div class="row gtr-uniform">
+                    <div class="col-12">
+                        <label for="calculated-text">Enter a text:</label>
+                        <textarea name="calculated-text" id="calculated-text" placeholder="Enter your text" rows="6"
+                                  autofocus></textarea>
+                        <label for="file-to-upload" hidden="hidden">Upload a file:</label>
+                        <input type="file" name="file-to-upload" id="file-to-upload" accept=".txt, .xml, .html">
+
+                        <label for="url">Enter an https:// URL:</label>
+                        <input type="url" name="url" id="url"
+                               placeholder="https://example.com"
+                               pattern="https://.*" size="30">
+                    </div>
+                    <div class="col-12">
+                        <ul class="actions">
+                            <li><input type="submit" value="Calculate" class="primary"/></li>
+                            <li><input id="reset" type="reset" value="Reset"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </section>
+        {% include 'sections/statistic.html.twig' %}
+
+    </div>
+{% endblock %}
