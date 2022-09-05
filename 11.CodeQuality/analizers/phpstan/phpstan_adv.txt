@@ -1,0 +1,271 @@
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Controller/DefaultController.php                                                                                     
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------- 
+  19     Class App\Controller\DefaultController extends unknown class Symfony\Bundle\FrameworkBundle\Controller\AbstractController.              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  21     Property App\Controller\DefaultController::$text has no type specified.                                                                 
+  22     Property App\Controller\DefaultController::$session has no type specified.                                                              
+  23     Property App\Controller\DefaultController::$entityManager has no type specified.                                                        
+  24     Property App\Controller\DefaultController::$lastResults has no type specified.                                                          
+  26     Parameter $doctrine of method App\Controller\DefaultController::__construct() has invalid type Doctrine\Persistence\ManagerRegistry.    
+  27     Instantiated class Symfony\Component\HttpFoundation\Session\Session not found.                                                          
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  28     Call to method has() on an unknown class Symfony\Component\HttpFoundation\Session\Session.                                              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  29     Call to method get() on an unknown class Symfony\Component\HttpFoundation\Session\Session.                                              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  31     Call to method getManager() on an unknown class Doctrine\Persistence\ManagerRegistry.                                                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  38     Method App\Controller\DefaultController::index() has no return type specified.                                                          
+  38     Parameter $request of method App\Controller\DefaultController::index() has invalid type Symfony\Component\HttpFoundation\Request.       
+  40     Call to method get() on an unknown class Symfony\Component\HttpFoundation\Request.                                                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  41     Call to method get() on an unknown class Symfony\Component\HttpFoundation\Request.                                                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  44     Call to method get() on an unknown class Symfony\Component\HttpFoundation\Request.                                                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  45     Call to method get() on an unknown class Symfony\Component\HttpFoundation\Request.                                                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  48     Access to property $files on an unknown class Symfony\Component\HttpFoundation\Request.                                                 
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  49     Access to property $files on an unknown class Symfony\Component\HttpFoundation\Request.                                                 
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  59     Call to an undefined method App\Controller\DefaultController::render().                                                                 
+  69     Method App\Controller\DefaultController::lastResults() has no return type specified.                                                    
+  72     Call to an undefined method App\Controller\DefaultController::redirectToRoute().                                                        
+  81     Call to an undefined method App\Controller\DefaultController::render().                                                                 
+  91     Method App\Controller\DefaultController::exportFile() has no return type specified.                                                     
+  91     Parameter $request of method App\Controller\DefaultController::exportFile() has invalid type Symfony\Component\HttpFoundation\Request.  
+  92     Call to method get() on an unknown class Symfony\Component\HttpFoundation\Request.                                                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  94     Call to method get() on an unknown class Symfony\Component\HttpFoundation\Request.                                                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  95     Access to constant HTTP_OK on an unknown class Symfony\Component\HttpFoundation\Response.                                               
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  95     Instantiated class Symfony\Component\HttpFoundation\Response not found.                                                                 
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  96     Access to property $headers on an unknown class Symfony\Component\HttpFoundation\Response.                                              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  97     Access to property $headers on an unknown class Symfony\Component\HttpFoundation\Response.                                              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  97     Call to method get() on an unknown class Symfony\Component\HttpFoundation\Request.                                                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  98     Call to method get() on an unknown class Symfony\Component\HttpFoundation\Request.                                                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  99     Access to property $headers on an unknown class Symfony\Component\HttpFoundation\Response.                                              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  102    Instantiated class Symfony\Component\HttpFoundation\JsonResponse not found.                                                             
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                      
+  108    Method App\Controller\DefaultController::globalStatistic() has no return type specified.                                                
+  111    Call to an undefined method App\Controller\DefaultController::render().                                                                 
+  116    Method App\Controller\DefaultController::storeResult() has no return type specified.                                                    
+  127    Method App\Controller\DefaultController::getStoredResult() has no return type specified.                                                
+  127    Method App\Controller\DefaultController::getStoredResult() has parameter $text with no type specified.                                  
+  143    Method App\Controller\DefaultController::getCurrentSessionResults() has no return type specified.                                       
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Entity/AnalizedText.php                                        
+ ------ ---------------------------------------------------------------------------------- 
+  18     Property App\Entity\AnalizedText::$id has no type specified.                      
+  18     Property App\Entity\AnalizedText::$id is never written, only read.                
+         💡 See: https://phpstan.org/developing-extensions/always-read-written-properties   
+  23     Property App\Entity\AnalizedText::$session_id has no type specified.              
+  28     Property App\Entity\AnalizedText::$hash has no type specified.                    
+  33     Property App\Entity\AnalizedText::$result has no type specified.                  
+  38     Property App\Entity\AnalizedText::$created_at has no type specified.              
+ ------ ---------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Entity/Statistic.php                                           
+ ------ ---------------------------------------------------------------------------------- 
+  18     Property App\Entity\Statistic::$id has no type specified.                         
+  18     Property App\Entity\Statistic::$id is never written, only read.                   
+         💡 See: https://phpstan.org/developing-extensions/always-read-written-properties   
+  23     Property App\Entity\Statistic::$characters_count has no type specified.           
+  28     Property App\Entity\Statistic::$words_count has no type specified.                
+  33     Property App\Entity\Statistic::$senetnces_count has no type specified.            
+  38     Property App\Entity\Statistic::$word_length_avg has no type specified.            
+  43     Property App\Entity\Statistic::$words_in_sentence_avg has no type specified.      
+  48     Property App\Entity\Statistic::$count has no type specified.                      
+ ------ ---------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Kernel.php                                                                
+ ------ --------------------------------------------------------------------------------------------- 
+  8      Class App\Kernel extends unknown class Symfony\Component\HttpKernel\Kernel.                  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                           
+  10     Class App\Kernel uses unknown trait Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                           
+ ------ --------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Repository/AnalizedTextRepository.php                                                                                               
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  17     Class App\Repository\AnalizedTextRepository extends unknown class Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository.                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                     
+  17     PHPDoc tag @extends has invalid type Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository.                                                
+  19     Parameter $registry of method App\Repository\AnalizedTextRepository::__construct() has invalid type Doctrine\Persistence\ManagerRegistry.              
+  21     App\Repository\AnalizedTextRepository::__construct() calls parent::__construct() but App\Repository\AnalizedTextRepository does not extend any class.  
+  26     Call to an undefined method App\Repository\AnalizedTextRepository::getEntityManager().                                                                 
+  29     Call to an undefined method App\Repository\AnalizedTextRepository::getEntityManager().                                                                 
+  35     Call to an undefined method App\Repository\AnalizedTextRepository::getEntityManager().                                                                 
+  38     Call to an undefined method App\Repository\AnalizedTextRepository::getEntityManager().                                                                 
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Repository/StatisticRepository.php                                                                                            
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------- 
+  17     Class App\Repository\StatisticRepository extends unknown class Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository.                
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                               
+  17     PHPDoc tag @extends has invalid type Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository.                                          
+  19     Parameter $registry of method App\Repository\StatisticRepository::__construct() has invalid type Doctrine\Persistence\ManagerRegistry.           
+  21     App\Repository\StatisticRepository::__construct() calls parent::__construct() but App\Repository\StatisticRepository does not extend any class.  
+  26     Call to an undefined method App\Repository\StatisticRepository::getEntityManager().                                                              
+  29     Call to an undefined method App\Repository\StatisticRepository::getEntityManager().                                                              
+  35     Call to an undefined method App\Repository\StatisticRepository::getEntityManager().                                                              
+  38     Call to an undefined method App\Repository\StatisticRepository::getEntityManager().                                                              
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Services/Import/CsvFile.php                                                                               
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  7      Method App\Services\Import\CsvFile::export() has no return type specified.                                                   
+  7      Method App\Services\Import\CsvFile::export() has parameter $exportData with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                     
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Services/Import/ExportFactory.php                                                
+ ------ ---------------------------------------------------------------------------------------------------- 
+  15     Method App\Services\Import\ExportFactory::getFactory() has no return type specified.                
+  15     Method App\Services\Import\ExportFactory::getFactory() has parameter $type with no type specified.  
+ ------ ---------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Services/Import/ExportInterface.php                                                                               
+ ------ ------------------------------------------------------------------------------------------------------------------------------------- 
+  5      Method App\Services\Import\ExportInterface::export() has no return type specified.                                                   
+  5      Method App\Services\Import\ExportInterface::export() has parameter $exportData with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                             
+ ------ ------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Services/Import/HtmlFile.php                                                    
+ ------ --------------------------------------------------------------------------------------------------- 
+  7      Property App\Services\Import\HtmlFile::$data has no type specified.                                
+  13     Method App\Services\Import\HtmlFile::setPath() has parameter $path with no type specified.         
+  19     Method App\Services\Import\HtmlFile::htmlToPlainText() has parameter $str with no type specified.  
+ ------ --------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Services/Import/ImportFactory.php                                                
+ ------ ---------------------------------------------------------------------------------------------------- 
+  15     Method App\Services\Import\ImportFactory::getFactory() has no return type specified.                
+  15     Method App\Services\Import\ImportFactory::getFactory() has parameter $type with no type specified.  
+ ------ ---------------------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Services/Import/ImportInterface.php                                             
+ ------ --------------------------------------------------------------------------------------------------- 
+  8      Method App\Services\Import\ImportInterface::setPath() has parameter $path with no type specified.  
+ ------ --------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Services/Import/TxtFile.php                                             
+ ------ ------------------------------------------------------------------------------------------- 
+  7      Property App\Services\Import\TxtFile::$data has no type specified.                         
+  13     Method App\Services\Import\TxtFile::setPath() has parameter $path with no type specified.  
+ ------ ------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------ 
+  Line   10.PHPAdvanced/src/Services/Import/XlsxFile.php                                                                               
+ ------ ------------------------------------------------------------------------------------------------------------------------------ 
+  10     Method App\Services\Import\XlsxFile::export() has no return type specified.                                                   
+  10     Method App\Services\Import\XlsxFile::export() has parameter $exportData with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                      
+  11     Instantiated class PhpOffice\PhpSpreadsheet\Spreadsheet not found.                                                            
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                            
+  13     Call to method getActiveSheet() on an unknown class PhpOffice\PhpSpreadsheet\Spreadsheet.                                     
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                            
+  22     Instantiated class PhpOffice\PhpSpreadsheet\Writer\Xlsx not found.                                                            
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                            
+  27     Call to method save() on an unknown class PhpOffice\PhpSpreadsheet\Writer\Xlsx.                                               
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                            
+ ------ ------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Services/Import/XmlFile.php                                                                               
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  10     Property App\Services\Import\XmlFile::$data has no type specified.                                                           
+  16     Method App\Services\Import\XmlFile::setPath() has parameter $path with no type specified.                                    
+  26     Method App\Services\Import\XmlFile::export() has no return type specified.                                                   
+  26     Method App\Services\Import\XmlFile::export() has parameter $exportData with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                     
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/Services/Statistic/GlobalStaistic.php                                                                 
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+  14     Property App\Services\Statistic\GlobalStaistic::$model has no type specified.                                            
+  15     Property App\Services\Statistic\GlobalStaistic::$entityManager has no type specified.                                    
+  16     Property App\Services\Statistic\GlobalStaistic::$statistic has no type specified.                                        
+  18     Method App\Services\Statistic\GlobalStaistic::__construct() has parameter $entityManager with no type specified.         
+  24     Method App\Services\Statistic\GlobalStaistic::store() has no return type specified.                                      
+  38     Method App\Services\Statistic\GlobalStaistic::get() has no return type specified.                                        
+  48     Method App\Services\Statistic\GlobalStaistic::calculateAvg() has no return type specified.                               
+  48     Method App\Services\Statistic\GlobalStaistic::calculateAvg() has parameter $modelMethodName with no type specified.      
+  48     Method App\Services\Statistic\GlobalStaistic::calculateAvg() has parameter $statisticMethodName with no type specified.  
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/models/ExportData.php                            
+ ------ -------------------------------------------------------------------- 
+  7      Property App\models\ExportData::$data has no type specified.        
+  8      Property App\models\ExportData::$model has no type specified.       
+  14     Method App\models\ExportData::fill() has no return type specified.  
+  22     Method App\models\ExportData::get() has no return type specified.   
+ ------ -------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+  Line   10.PHPAdvanced/src/models/Text.php                                                                                   
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+  19     Property App\models\Text::$sentencesCount has no type specified.                                                     
+  24     Property App\models\Text::$sentencesArray type has no value type specified in iterable type array.                   
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  25     Property App\models\Text::$wordsArray has no type specified.                                                         
+  26     Property App\models\Text::$charactersFrequency has no type specified.                                                
+  28     Method App\models\Text::__construct() has parameter $text with no type specified.                                    
+  62     Method App\models\Text::getCharactersFrequency() return type has no value type specified in iterable type array.     
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  136    Method App\models\Text::isPalindromeString() has parameter $string with no type specified.                           
+  168    Method App\models\Text::getSentencesArray() return type has no value type specified in iterable type array.          
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  190    Method App\models\Text::getWordsArray() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  206    Method App\models\Text::getMostUsedWords() has parameter $limit with no type specified.                              
+  206    Method App\models\Text::getMostUsedWords() return type has no value type specified in iterable type array.           
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  216    Method App\models\Text::getShortestWords() has parameter $limit with no type specified.                              
+  216    Method App\models\Text::getShortestWords() return type has no value type specified in iterable type array.           
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  225    Method App\models\Text::getLongestWords() has parameter $limit with no type specified.                               
+  225    Method App\models\Text::getLongestWords() return type has no value type specified in iterable type array.            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  235    Method App\models\Text::getShortestSentences() has parameter $limit with no type specified.                          
+  235    Method App\models\Text::getShortestSentences() return type has no value type specified in iterable type array.       
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  244    Method App\models\Text::getLongestSentences() has parameter $limit with no type specified.                           
+  244    Method App\models\Text::getLongestSentences() return type has no value type specified in iterable type array.        
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  254    Method App\models\Text::getLongestPalindromeWords() has parameter $limit with no type specified.                     
+  254    Method App\models\Text::getLongestPalindromeWords() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  272    Method App\models\Text::sortedByLength() has parameter $arr with no type specified.                                  
+  283    Method App\models\Text::strrevArr() has parameter $str with no type specified.                                       
+  295    Method App\models\Text::makeHash() has no return type specified.                                                     
+  295    Method App\models\Text::makeHash() has parameter $text with no type specified.                                       
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+
+ [ERROR] Found 134 errors                                                                                               
+

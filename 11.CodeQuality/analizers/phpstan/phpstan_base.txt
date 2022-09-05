@@ -1,0 +1,90 @@
+ ------ ------------------------------------------------------------------------ 
+  Line   3.PHPBasics/app/components/TimeService.php                              
+ ------ ------------------------------------------------------------------------ 
+  8      Property TimeService::$startTime has no type specified.                 
+  36     Parameter #2 $timestamp of function strftime expects int, float given.  
+ ------ ------------------------------------------------------------------------ 
+
+ ------ --------------------------------------------------------------------- 
+  Line   3.PHPBasics/app/controllers/MainController.php                       
+ ------ --------------------------------------------------------------------- 
+  11     Constant ROOT not found.                                             
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols   
+  12     Constant ROOT not found.                                             
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols   
+  23     Instantiated class App\models\Text not found.                        
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols   
+  24     Constant ROOT not found.                                             
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols   
+ ------ --------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   3.PHPBasics/app/index.php                                              
+ ------ ----------------------------------------------------------------------- 
+  9      If condition is always true.                                           
+  11     Parameter #2 $newvalue of function ini_set expects string, int given.  
+  14     Parameter #2 $newvalue of function ini_set expects string, int given.  
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------- 
+  Line   3.PHPBasics/app/models/Text.php                                                                           
+ ------ ---------------------------------------------------------------------------------------------------------- 
+  17     Property Text::$sentencesCount has no type specified.                                                     
+  22     Property Text::$sentencesArray type has no value type specified in iterable type array.                   
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                  
+  23     Property Text::$wordsArray has no type specified.                                                         
+  24     Property Text::$charactersFrequency has no type specified.                                                
+  26     Method Text::__construct() has parameter $text with no type specified.                                    
+  60     Method Text::getCharactersFrequency() return type has no value type specified in iterable type array.     
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                  
+  134    Method Text::isPalindromeString() has parameter $string with no type specified.                           
+  166    Method Text::getSentencesArray() return type has no value type specified in iterable type array.          
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                  
+  188    Method Text::getWordsArray() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                  
+  204    Method Text::getMostUsedWords() has parameter $limit with no type specified.                              
+  204    Method Text::getMostUsedWords() return type has no value type specified in iterable type array.           
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                  
+  214    Method Text::getShortestWords() has parameter $limit with no type specified.                              
+  214    Method Text::getShortestWords() return type has no value type specified in iterable type array.           
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                  
+  223    Method Text::getLongestWords() has parameter $limit with no type specified.                               
+  223    Method Text::getLongestWords() return type has no value type specified in iterable type array.            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                  
+  233    Method Text::getShortestSentences() has parameter $limit with no type specified.                          
+  233    Method Text::getShortestSentences() return type has no value type specified in iterable type array.       
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                  
+  242    Method Text::getLongestSentences() has parameter $limit with no type specified.                           
+  242    Method Text::getLongestSentences() return type has no value type specified in iterable type array.        
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                  
+  252    Method Text::getLongestPalindromeWords() has parameter $limit with no type specified.                     
+  252    Method Text::getLongestPalindromeWords() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                  
+  270    Method Text::sortedByLength() has parameter $arr with no type specified.                                  
+  281    Method Text::strrevArr() has parameter $str with no type specified.                                       
+ ------ ---------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------- 
+  Line   3.PHPBasics/app/views/index.php       
+ ------ -------------------------------------- 
+  57     Variable $text might not be defined.  
+  58     Variable $text might not be defined.  
+  59     Variable $text might not be defined.  
+  60     Variable $text might not be defined.  
+  61     Variable $text might not be defined.  
+  68     Variable $text might not be defined.  
+  69     Variable $text might not be defined.  
+  79     Variable $text might not be defined.  
+  88     Variable $text might not be defined.  
+  97     Variable $text might not be defined.  
+  106    Variable $text might not be defined.  
+  118    Variable $text might not be defined.  
+  127    Variable $text might not be defined.  
+  147    Variable $text might not be defined.  
+  168    Variable $text might not be defined.  
+  181    Variable $text might not be defined.  
+  184    Variable $text might not be defined.  
+ ------ -------------------------------------- 
+
+ [ERROR] Found 49 errors                                                                                                
+
