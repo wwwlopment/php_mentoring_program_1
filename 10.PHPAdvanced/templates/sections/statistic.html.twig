@@ -1,0 +1,165 @@
+{% if text|default %}
+<!-- Statistic -->
+    <section id="statistic" class="wrapper style3 fade-up">
+        <div class="inner">
+            <h2>Statistic</h2>
+            <div style="margin: 30px">
+                <form action="/" method="post">
+                    <fieldset id="export" data-route="{{ path('export_file') }}">
+                        <legend>Export results types:</legend>
+                        <div>
+                            <input type="radio" id="export-csv-value" name="export-format" value="csv" checked>
+                            <label for="export-csv-value">CSV</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="export-xml-value" name="export-format" value="xml">
+                            <label for="export-xml-value">XML</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="export-xlsx-value" name="export-format" value="xlsx">
+                            <label for="export-xlsx-value">XLSX</label>
+                        </div>
+                        <div>
+                            <input type="submit" class="primary" value="Export">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="features">
+                <section>
+                    <span class="icon solid major fa-list"></span>
+                    <h3>Calculations</h3>
+                    <p>
+                        Number of characters: {{ text.getCharactersCount() }}<br>
+                        Number of words: {{ text.getWordsCount() }}<br>
+                        Number of sentences: {{ text.getSentencesCount() }} <br>
+                        Average word length: {{ text.getWordLengthAverage() }} <br>
+                        The average number of words in a sentence: {{ text.getWordsInSentenceAverage() }} <br>
+                    </p>
+                </section>
+                <section>
+                    <span class="icon solid major fa-bars"></span>
+                    <h3>Palindroms</h3>
+                    <p>
+                        Number of palindrome words: {{ text.getPalindromeWordsCount() }} <br>
+                        Is the whole text a palindrome: {{ text.isWholeTextPalindrome() ? 'Yes' : 'No' }} <br>
+                    </p>
+                </section>
+            </div>
+            <!-- -->
+            <div class="features">
+                <section>
+                    <span class="icon solid major fa-hashtag"></span>
+                    <h3>TOP 10 most used words: </h3>
+                    <ol>
+                        {%  for word in text.getMostUsedWords() %}
+                            <li>{{ word }}</li>
+                        {% endfor %}
+                    </ol>
+                </section>
+                <section>
+                    <span class="icon solid major fa-hashtag"></span>
+                    <h3>TOP 10 longest words:</h3>
+                    <ol>
+                        {% for word in text.getLongestWords() %}
+                            <li> {{ word }} </li>
+                        {% endfor %}
+                    </ol>
+                </section>
+                <section>
+                    <span class="icon solid major fa-hashtag"></span>
+                    <h3>TOP 10 shortest words:</h3>
+                    <ol>
+                        {% for word in text.getShortestWords() %}
+                            <li> {{ word }} </li>
+                        {% endfor %}
+                    </ol>
+                </section>
+                <section>
+                    <span class="icon solid major fa-hashtag"></span>
+                    <h3>TOP 10 longest palindrome words:</h3>
+                    <ol>
+                        {% for word in text.getLongestPalindromeWords() %}
+                            <li> {{ word }} </li>
+                        {% endfor %}
+                    </ol>
+                </section>
+            </div>
+            <!-- -->
+            <div class="features">
+                <section>
+                    <span class="icon solid major fa-info"></span>
+                    <h3>TOP 10 longest sentences: </h3>
+                    <ol>
+                        {% for sentence in text.getLongestSentences() %}
+                            <li> {{ sentence }} </li>
+                        {% endfor %}
+                    </ol>
+                </section>
+                <section>
+                    <span class="icon solid major fa-info"></span>
+                    <h3>TOP 10 shortest sentences:</h3>
+                    <ol>
+                        {% for sentence in text.getShortestSentences() %}
+                            <li> {{ sentence }} </li>
+                        {% endfor %}
+                    </ol>
+                </section>
+            </div>
+            <!-- -->
+            <section>
+                <div class="row">
+                    <div class="col-6 col-12-medium" style="padding-right: 10px">
+                        <h2>Frequency of characters</h2>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Character</th>
+                                    <th>Frequency</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    {% for char, count in text.getCharactersFrequency() %}
+                                        <tr>
+                                            <td> {{ char }} </td>
+                                            <td> {{ count }} </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-6 col-12-medium">
+                        <h2>Distribution of characters as a percentage of total</h2>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Character</th>
+                                    <th>Percentage</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    {% for char, percentage in text.getCharactersPercentage() %}
+                                        <tr>
+                                            <td> {{ char }} </td>
+                                            <td> {{ percentage | round(2) }} %</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h3>The reversed text:</h3>
+            <blockquote> {{ text.getReverseText() }} </blockquote>
+            <!-- -->
+            <h3>The reversed text but the character order in words kept intact:</h3>
+            <blockquote> {{ text.getReverseWords() }} </blockquote>
+            <p>Date and time when the report was generated: {% if timeService is defined %} {{ timeService.getCurrentFormattedDataTime() }} {% endif %} </p>
+            <p>The time it took to process the text: {% if timeService is defined %} {{ timeService.getFormattedSpentTime() }} {% endif %} </p>
+        </div>
+    </section>
+{% endif %}
